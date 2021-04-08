@@ -1,0 +1,20 @@
+<view class="contianer-cart">
+  <block wx:for="{{list}}" wx:for-item="item" wx:key="id">
+    <view class="cart-item">
+      <image src="{{item.pic}}"></image>
+      <view class="cart-text-pa">
+        <text class="cart-text1">{{item.name}}</text>
+        <text class="cart-text2">{{item.price}}</text>
+      </view>
+      <view>
+        <van-icon class="delete-icon" bind:click="deleFun" data-myid="{{item.id}}" name="delete" size="25px"
+          color="red" />
+        <van-stepper class="jjian-icon" value="{{item.num}}" data-myid="{{item.id}}" bind:change="onChange" />
+      </view>
+    </view>
+  </block>
+  <view class="cart-buttom">
+    <text>合计：{{total}}</text>
+    <text class="cart-buttom-btn">去结算</text>
+  </view>
+</view>

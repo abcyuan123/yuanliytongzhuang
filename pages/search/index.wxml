@@ -1,0 +1,30 @@
+<view class="container-search">
+  <view class="search-header">
+    <view class="search-input">
+      <input type="text" placeholder="输入搜索关键词" value="{{searchValue}}" bindinput="bindinputfun" />
+      <van-icon bind:click="seachFun" name="search" />
+    </view>
+    <image src="/images/icon/list1.svg"></image>
+  </view>
+  <view class="search-list">
+    <view class="search-list-head">
+      <text bindtap="filter" class="{{order==0?'active':''}}" data-val="0">综合</text>
+      <text bindtap="filter" class="{{order==1?'active':''}}" data-val="1">新品</text>
+      <text bindtap="filter" class="{{order==2?'active':''}}" data-val="2">销量</text>
+      <text bindtap="filter" class="{{order==3?'active':''}}" data-val="3">价格</text>
+    </view>
+  </view>
+  <view class="search-list-bottom">
+    <block wx:for="{{searchList}}" wx:for-item="item" wx:key="id">
+      <view class="search-bottm-item">
+        <image src="{{item.pic}}"></image>
+        <view class="search-bottm-rigth">
+          <text>{{item.name}}</text>
+          <text class="bottm-right-text1">￥{{item.minPrice}}</text>
+          <text class="bottm-right-text2">已售{{item.numberSells}}件</text>
+          <van-icon name="shopping-cart-o" color="red" size="50px" class="gouwuche" />
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

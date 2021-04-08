@@ -1,0 +1,79 @@
+.container-cart {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  position: relative;
+}
+
+.cart-item image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.cart-text-pa {
+  width: 362rpx;
+}
+
+.cart-text1 {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cart-text2 {
+  display: block;
+  margin-left: 12rpx;
+  margin-top: 10rpx;
+  color: red;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 30rpx;
+  right: 20rpx;
+}
+
+.jjian-icon {
+  position: absolute;
+  left: 404rpx;
+  top: 29rpx
+}
+
+.cart-buttom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.cart-buttom text {
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  color: red;
+  font-size: 28rpx;
+}
+
+.cart-buttom-btn {
+  display: block;
+  width: 214rpx;
+  height: 100rpx;
+  background-color: red;
+  color: #fff !important;
+  font-size: 32rpx !important;
+  text-align: center;
+}

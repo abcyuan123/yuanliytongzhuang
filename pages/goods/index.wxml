@@ -1,0 +1,45 @@
+<view class="container-list">
+  <view class="swiper-container">
+    <swiper class="swiper_box" indicator-dots="true" indicator-active-color="#fff" circular="">
+      <swiper-item wx:for="{{goodsDetailL}}" wx:key="id">
+        <image src="{{item.pic}}" class="slide-image"></image>
+      </swiper-item>
+    </swiper>
+    <text class="swiper-name">{{basicInfo.name}}</text>
+    <text class="swiper-list">
+      <text class="swiper-list-text1">￥{{basicInfo.minPrice}}</text>
+      <text class="swiper-list-text2">￥{{basicInfo.originalPrice}}</text>
+      <text class="swiper-list-text3">{{basicInfo.minBuyNumber}}人已购买</text>
+      <view class="swiper-list-image">
+        <image src="/images/share/share1.png"></image>
+        <button open-type='share'></button>
+        <image bindtap="drawSharePic"  src='/images/share/share2.png'></image>
+      </view>
+    </text>
+  </view>
+  <view class="detail-image">
+    <text class="detail-name">商品介绍</text>
+    <view class="goods-text">
+      <rich-text nodes="{{goodsDetail}}"></rich-text>
+    </view>
+  </view>
+  <view class="detail-buttom">
+    <van-icon name="chat-o" size="30px"/>
+    <van-icon bind:click="addShopCar" name="shopping-cart-o"   bind:click="gettocart" info="{{mynum}}"    size="30px"/>
+    <van-icon name="like-o" bind:click="islickFun"    wx:if="{{isLike}}"  size="30px"/>
+    <van-icon name="like" bind:click="islickFun"  wx:if="{{!isLike}}"    size="30px"/>
+    <text bindtap="showpopup" class="jrgwc">加入购物车</text>
+    <text class="ljgm">立即购买</text>
+  </view>
+  <van-popup
+  show="{{ show }}"
+  closeable
+  position="bottom"
+  custom-style="height: 30%;"
+  bind:close="onClose"
+ >
+  <text>购买数量</text>
+  <van-stepper value="{{ mynum }}" bind:change="onChange" />
+  <text class="ljgm" bindtap="gotoOrder">立即购买</text>
+ </van-popup>
+</view>

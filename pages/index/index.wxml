@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="swiper-container">
+  <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:for-item="item" wx:key="id">
+      <image src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
+  <swiper class="swiper2" indicator-active-color="#fff" autoplay circular vertical>
+    <swiper-item>
+      <text>xxxx购买了 xxxx</text>
+    </swiper-item>
+    <swiper-item>
+      <text>xxxx购买了 xxxx</text>
+    </swiper-item>
+    <swiper-item>
+      <text>xxxx购买了 xxxx</text>
+    </swiper-item>
+  </swiper>
+  <view class="search">
+    <input type="text" placeholder="请输入关键词" bindinput="getinputValue"/>
+    <image src="/images/icon/search.svg" bindtap="searchFun"></image>
+  </view>
+  <view class="category-good-list">
+    <text>商城新开张，优惠多多，看我详情</text>
+    <navigator url="">更多>></navigator>
+  </view>
+  <view class="goods-list">
+    <block wx:for="{{catagy}}" wx:for-item="item" wx:key="id">
+      <view class="goods-item" bindtap="catagyFun" data-itmename="{{item.name}}">
+        <image src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <image class="live-banner" src="/images/live.jpg"></image>
+  <van-divider contentPosition="center">限时秒杀</van-divider>
+  <view class="miaosha">
+    <block wx:for="{{miaosha}}" wx:for-item="item" wx:key="id">
+      <view class="kanjia-item">
+        <image src="{{item.pic}}"></image>
+        <view class="miaosha-list">
+          <text>{{item.name}}</text>
+          <view class="count-down">
+            <van-count-down wx:if="{{item.dateStartInt > 0}}" time="{{ item.dateStartInt }}"
+              format="距离开始: HH 时 mm 分 ss 秒" />
+          </view>
+          <view class="text-btn">
+            <text>￥{{item.minPrice}} </text>
+            <text class="text-btn-text">￥{{item.originalPrice}}</text>
+            <van-button type="danger" size="small" round>立即抢购</van-button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <van-divider contentPosition="center">爆品推荐</van-divider>
+  <view class="baopin">
+    <block wx:for="{{baopin}}" wx:for-item="item" wx:key="id">
+      <view class="baopin-item">
+        <image src="{{item.pic}}"></image>
+        <text class="baopin-item-text1">{{item.name}}</text>
+        <text class="baopin-item-text2">{{item.minPrice}}</text>
+      </view>
+    </block>
+  </view>
+  <van-divider contentPosition="center">商品列表</van-divider>
+  <view class="baopin">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="id">
+      <view class="baopin-item">
+        <image src="{{item.pic}}"></image>
+        <text class="baopin-item-text1">{{item.name}}</text>
+        <text class="baopin-item-text2">{{item.minPrice}}</text>
+      </view>
+    </block>
+  </view>
+  <van-divider contentPosition="center">我们是有底线的</van-divider>
+</view>

@@ -1,0 +1,38 @@
+<view class="container-search">
+  <view class="search-header">
+    <view class="search-input">
+      <input type="text" placeholder="输入搜索关键词" value="{{searchValue}}" bindinput="bindinputfun" />
+      <van-icon bind:click="seachFun" name="search" />
+    </view>
+  </view>
+  <view class="category-list">
+    <scroll-view scroll-y="true" class="category-left">
+      <text bindtap="filter" class="{{order == 0?'active':''}}" data-val="0">上装</text>
+      <text bindtap="filter" class="{{order == 1?'active':''}}" data-val="1">裤装</text>
+      <text bindtap="filter" class="{{order == 2?'active':''}}" data-val="2">特价区</text>
+      <text bindtap="filter" class="{{order == 3?'active':''}}" data-val="3">裙装</text>
+      <text bindtap="filter" class="{{order == 4?'active':''}}" data-val="4">套装</text>
+      <text bindtap="filter" class="{{order == 5?'active':''}}" data-val="5">外套</text>
+      <text bindtap="filter" class="{{order == 6?'active':''}}" data-val="6">秒杀</text>
+      <text bindtap="filter" class="{{order == 7?'active':''}}" data-val="7">内裤</text>
+      <text bindtap="filter" class="{{order == 8?'active':''}}" data-val="8">袜子</text>
+      <text bindtap="filter" class="{{order == 9?'active':''}}" data-val="9">鞋</text>
+    </scroll-view>
+    <view class="category-right">
+      <view wx:if="{{cateArray.length == 0?fale:true}}">
+        <block wx:for="{{cateArray}}" wx:for-item="item" wx:key="id">
+          <view class="search-bottm-item" bindtap="gettodetail" data-myid="{{item.id}}">
+            <image src="{{item.pic}}"></image>
+            <view class="search-bottm-rigth">
+              <text class="bottm-right-text">{{item.name}}</text>
+              <text class="bottm-right-text1">￥{{item.minPrice}}</text>
+                <text class="bottm-right-text2">已售{{item.numberSells}}件</text>
+                <van-icon name="shopping-cart-o"  color="red"  size="25px"  class="gouwuche"/>
+            </view>
+          </view>
+        </block>
+      </view>
+      <van-divider wx:if="{{cateArray.length == 0? true: false}}" contentPosition="center">暂无商品</van-divider>
+    </view>
+  </view>
+</view>

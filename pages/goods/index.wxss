@@ -1,0 +1,127 @@
+page,view,image,input,textarea {
+  display: block;
+  box-sizing: border-box;
+}
+.container-list{
+  background-color: #F2f2f2;
+  min-height: 100%;
+  padding-bottom: 100rpx;
+}
+.swiper-container{
+  width: 100%;
+  position: relative;  
+  background-color: #fff;
+}
+.swiper_box {
+  width: 100%;
+  height:748rpx;
+}
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:748rpx;
+}
+.swiper-name{
+  display: block;
+  margin: 20rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+}
+.swiper-list{
+  display: flex;
+  padding: 20rpx;
+  align-items: center;
+}
+.swiper-list-image{
+   display: flex;
+   position: absolute;
+   right:30rpx;
+}
+.swiper-list-image image{
+   width: 50rpx;
+   height: 50rpx;
+   margin-right: 10rpx;
+}
+.swiper-list-image button{
+  position: absolute;
+  height: 100%;
+  right:50rpx;
+  width: 100%;
+  opacity: 0;
+  z-index: 99;
+}
+.swiper-list-text1{
+  color: #e64340;
+  font-size: 20px;
+  margin-left: 30rpx;
+}
+.swiper-list-text2{
+color: #aaa;
+text-decoration: line-through;
+padding: 7px 0px 0px 7px;
+}
+.swiper-list-text3{
+  color: #ccc;
+  font-size: 10pt;
+  margin-left: 30rpx;
+}
+.delta-image{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 50rpx;
+}
+.detail-name{
+  font-size: 28rpx;
+  color: #000000;
+  padding: 30rpx;
+}
+.delta-image image{
+  width: 100%;
+}
+.goods-text{
+  padding: 0 10rpx;
+  font-size:28rpx;
+  color:#666666;
+  line-height: 56rpx;
+  margin-bottom: 30rpx;
+}
+.img-ks-lazyload{
+  width: 100%;
+}
+.detail-buttom{
+  height: 130rpx;
+  z-index: 99;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  left:0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.van-icon{
+  width: 120rpx !important;
+}
+.jrgwc,.ljgm{
+  height: 100rpx;
+  width: 200rpx;
+  display: inline-block;
+  background-color: red;
+  line-height: 100rpx;
+  color: #fff;
+}
+.jrgwc{
+   background-color: burlywood;
+   border-bottom-left-radius: 40rpx;
+   border-top-left-radius: 40rpx;
+}
+.ljgm{
+  border-bottom-right-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}

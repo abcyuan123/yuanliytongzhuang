@@ -1,0 +1,55 @@
+<view class="container-my">
+  <view class="header-box">
+      <image src="/images/live.jpg"></image>
+      <view class="header-text">
+         <text>用户Id:1212122</text>
+         <text>刘杰</text>
+      </view>
+  </view>
+  <view class="my-yue">
+     <view class="my-vue-chil">
+       <text>0.00</text>
+       <text>余额</text>
+     </view>
+     <view class="my-vue-chil">
+       <text>0.00</text>
+       <text>余额</text>
+     </view>
+     <view class="my-vue-chil">
+       <text>0.00</text>
+       <text>余额</text>
+     </view>
+     <view class="my-vue-chil last-view">
+       <text>0.00</text>
+       <text>余额</text>
+     </view>
+  </view>
+  <view  class="menu-item" bindtap="gotoorder" data-type="0">
+     <text>我的订单</text>
+     <image class="next" src="/images/icon/next.png"></image>
+  </view>
+  <view class='order-shortcut'>
+    <view class='item' bindtap='gotoorder' data-type="1">
+      <text class="item-num">1</text>
+      <image src="/images/order/topay.png" background-size="cover"></image>
+      <text>待付款</text>
+    </view>
+    <view class='item' bindtap='gotoorder' data-type="2">
+      <text class="item-num">1</text>
+      <image src="/images/order/topay.png" background-size="cover"></image>
+      <text>代发货</text>
+    </view>
+    <view class='item' bindtap='gotoorder' data-type="3">
+      <image src="/images/order/topay.png" background-size="cover"></image>
+      <text>待收货</text>
+    </view>
+    <view class='item' bindtap='gotoorder' data-type="4">
+      <image src="/images/order/topay.png" background-size="cover"></image>
+      <text>待评价</text>
+    </view>
+    <view class='item' bindtap='gotoorder' data-type="5">
+      <image src="/images/order/topay.png" background-size="cover"></image>
+      <text>售后</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shop-cart/index",
+    "pages/category/category",
+    "pages/my/index",
+    "pages/search/index",
+    "pages/goods/index",
+    "pages/order/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008c8c",
+    "navigationBarTitleText": "yuanily童装",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/nav/ic_catefory_normal.png",
+        "selectedIconPath": "images/nav/ic_catefory_pressed.png"
+      },
+      {
+        "pagePath": "pages/shop-cart/index",
+        "text": "购物车",
+        "iconPath": "images/nav/cart-off.png",
+        "selectedIconPath": "images/nav/cart-on.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-stepper": "@vant/weapp/stepper/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

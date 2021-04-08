@@ -1,0 +1,90 @@
+.container-my{
+  width:100%;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.header-box{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  background-color: #e64340;
+}
+.header-box image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.header-text{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 40rpx;
+  color: #EEEEEE;
+  font-size: 28rpx;
+}
+.my-yue{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+}
+.my-yue .my-vue-chil{
+   display: flex;
+   height: 95rpx;
+   width: 167rpx;
+   border-right: 1px solid #eee;
+   flex-direction: column;
+   align-items: center;
+   font-size: 28rpx;
+}
+.last-view{
+  border-right: 0px !important;
+}
+.menu-item{
+  height: 104rpx;
+  padding: 0 32rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.next{
+  width:40rpx;
+  height: 40rpx;
+}
+.order-shortcut{
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+.item {
+  position: relative;
+}
+.item .item-num{
+  color: red;
+  position: absolute;
+  top: -4rpx;
+  left: 65rpx;
+}
+.order-shortcut .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx 0rpx;
+  color: #666;
+}
+.order-shortcut .item image{
+  width: 67rpx;
+  height: 67rpx;
+}
+.order-shortcut .item text{
+   display: block;
+}
